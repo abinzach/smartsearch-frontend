@@ -31,7 +31,7 @@ const CreditModal = ({ isOpen, setIsOpen }) => {
               Uh-oh! Your Credits Are All Used Up.
               </h3>
               <p className="text-center mb-6">
-              Looks like you've used up all your credits. Don't worry! You can earn more credits by reaching out to me directly. Let's explore ways to boost your credits together.
+              Looks like you&apos;ve used up all your credits. Don&apos;t worry! You can earn more credits by reaching out to me directly. Let&apos;s explore ways to boost your credits together.
               </p>
               <div className="flex gap-2">
           
