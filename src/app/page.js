@@ -28,7 +28,7 @@ const Homepage = () => {
   useEffect(() => {
     // Redirect to sign-in page if user is not logged in
     if (!user?.email) {
-      router.push("/login");
+      router.push("/signup");
     } else {
       // Fetch user's credits from Firestore
       const fetchCredits = async () => {
@@ -125,6 +125,7 @@ const Homepage = () => {
       console.error("Error logging out:", error);
     }
   };
+  
   if (backendLoading) {
     return <BackendLoading/>
   }
