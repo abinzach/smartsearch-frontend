@@ -16,13 +16,19 @@ export function AuthContextProvider({ children }) {
       setLoading(true);
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
-
-      // Add the user to Firestore with initial credits
-      await setDoc(doc(db, 'users', user.uid), {
-        email: user.email,
-        credits: 2 // Set initial credits to 2
-      });
-
+  
+      // Check if the user already exists in Firestore
+      const userRef = doc(db, 'users', user.uid);
+      const userDoc = await getDoc(userRef);
+  
+      if (!userDoc.exists()) {
+        // User doesn't exist, add them to Firestore with initial credits
+        await setDoc(userRef, {
+          email: user.email,
+          credits: 2 // Set initial credits to 2
+        });
+      }
+  
       setUser({
         uid: user.uid,
         email: user.email,
@@ -33,7 +39,7 @@ export function AuthContextProvider({ children }) {
       setLoading(false);
     }
   };
-
+  
   const logIn = async () => {
     try {
       setLoading(true);
