@@ -132,11 +132,11 @@ const Homepage = () => {
     <>
       <div className="w-full h-screen flex justify-center items-center">
         <img
-          className="sm:block absolute w-full h-full object-cover"
+          className=" absolute w-full h-screen object-cover"
           src="https://images.unsplash.com/photo-1706708316348-942c80a29576?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="/"
         />
-        <div className="bg-black/10 backdrop-blur-3xl absolute top-0 left-0 w-full h-full"></div>
+        <div className="bg-black/10 backdrop-blur-3xl absolute top-0 left-0 w-full h-screen"></div>
         <Link
           href="/"
           className="text-3xl text-white cursor-pointer font-semibold p-5 absolute top-0 left-0 right-0"
@@ -145,7 +145,7 @@ const Homepage = () => {
         </Link>
         <div className="flex items-center gap-5 absolute p-5 top-0 right-0">
           {credits === 0 && (
-            <p className="text-white text-sm bg-yellow-400/30 p-1 px-3 rounded-full ">
+            <p className="text-white hidden md:block text-sm bg-yellow-400/30 p-1 px-3 rounded-full ">
               No credits left
             </p>
           )}
