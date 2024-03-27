@@ -32,11 +32,11 @@ const Login = () => {
     <>
       <div className='w-full h-screen'>
       <img
-        className=' sm:block absolute w-full h-full object-cover'
+        className=' sm:block absolute w-full h-screen object-cover'
         src='https://images.unsplash.com/photo-1706708316348-942c80a29576?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         alt='/'
       />
-       <div className="bg-black/10 backdrop-blur-3xl absolute top-0 left-0 w-full h-full"></div>
+       <div className="bg-black/10 backdrop-blur-3xl absolute top-0 left-0 w-full h-screen"></div>
         
         <div className='fixed w-full my-auto h-full z-50'>
         <nav className='text-3xl text-white font-semibold p-5'>Smart<span className='font-thin'>Search</span></nav>
