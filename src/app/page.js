@@ -132,7 +132,7 @@ const Homepage = () => {
     <>
       <div className="w-full h-screen flex justify-center items-center">
         <img
-          className=" absolute w-full h-screen object-cover"
+          className="sm:block absolute w-full h-screen object-cover"
           src="https://images.unsplash.com/photo-1706708316348-942c80a29576?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="/"
         />

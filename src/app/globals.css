@@ -4,6 +4,7 @@
 
 ::-webkit-scrollbar {
   width: 6px; /* Set the width of the scrollbar */
+  
 }
 
 /* Thin scrollbar thumb */
@@ -19,5 +20,10 @@
 
 /* Thin scrollbar track on hover */
 ::-webkit-scrollbar-track:hover {
-  background-color: #f0f0f0; /* Set the color of the scrollbar track on hover */
+  background-color: #f0f0f0;
+  opacity: 50%; /* Set the color of the scrollbar track on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Set the color of the scrollbar corner */
 }
