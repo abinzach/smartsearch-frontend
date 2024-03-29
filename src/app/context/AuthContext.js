@@ -2,7 +2,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { auth, db } from '../firebase';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged} from "firebase/auth";
-import {setDoc,doc} from 'firebase/firestore'
+import {setDoc,doc,getDoc} from 'firebase/firestore'
 
 const AuthContext = createContext();
 const provider = new GoogleAuthProvider();
@@ -20,6 +20,7 @@ export function AuthContextProvider({ children }) {
       // Check if the user already exists in Firestore
       const userRef = doc(db, 'users', user.uid);
       const userDoc = await getDoc(userRef);
+ 
   
       if (!userDoc.exists()) {
         // User doesn't exist, add them to Firestore with initial credits
